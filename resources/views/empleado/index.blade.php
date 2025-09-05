@@ -18,8 +18,15 @@ Mostrar la lista de empleados
         @foreach ($empleados as $empleado)
             <tr class="border-2 border-gray-500 p-2">
                 <td class="border-2 border-gray-500 p-2">{{ $empleado->id }}</td>
-                <td class="border-2 border-gray-500 p-2">{{ $empleado->foto }}</td>
+
+                <td class="border-2 border-gray-500 p-2">{{ $empleado->foto }}
+                 img src="{{ asset('storage') . '/' . $empleado->foto }}" class="img-thumbnail img-fluid"
+
+                </td>
+
+
                 <td class="border-2 border-gray-500 p-2">{{ $empleado->nombre }}</td>
+
                 <td class="border-2 border-gray-500 p-2">{{ $empleado->ApellidoPaterno }}</td>
                 <td class="border-2 border-gray-500 p-2">{{ $empleado->ApellidoMaterno }}</td>
                 <td class="border-2 border-gray-500 p-2">{{ $empleado->correo }}</td>

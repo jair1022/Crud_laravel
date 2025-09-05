@@ -1,3 +1,9 @@
 Formulario de edicion de empleado
 
-@include('empleado.form') 
+<form action="{{ url ('/empleado/'.$empleado->id)}}">
+    @csrf
+    {{ method_field('PATCH') }}
+@include('empleado.form')
+</form>
+
+
